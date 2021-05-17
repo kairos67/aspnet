@@ -1,7 +1,7 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Message System";
+    ViewData["Title"] = "Message System for KAIROSYS";
 }
 
 <h1>@ViewData["Title"]</h1>
@@ -12,7 +12,7 @@
         <form method="post">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Add a message</h3>
+                    <h3 class="panel-title">Add a message 메시지를 입력하시오</h3>
                 </div>
                 <div class="panel-body">
                     <div class="form-group">
@@ -22,6 +22,7 @@
                     </div>
                     <div class="form-group">
                         <button type="submit" asp-page-handler="AddMessage" class="btn btn-default">Add Message</button>
+                        @*<button type="submit" asp-page-handler="AddMessage1" class="btn btn-default">Add Message Test</button>*@
                     </div>
                 </div>
             </div>
@@ -77,3 +78,25 @@
 
     </div>
 </div>
+<script>
+    var emptyRule = /\s/g;
+    if(!emptyRule.test($("input[name='inputbox']").val())) {
+        alert("공백이 아닙니다.");
+    } else {
+        alert("공백이 맞습니다.");
+    }
+
+    return false;
+</script>
+
+<script>
+    $(document).on("keydown", function (e) {
+        alert(e.keyCode);
+
+        // 예시
+        if (e.keyCode == 45) {
+            var opt = 'top=10, left=10, width=400, height=600';
+            window.open('https://blog.naver.com/dev_dog', 'blogPop', opt);
+        }
+    });
+</script>

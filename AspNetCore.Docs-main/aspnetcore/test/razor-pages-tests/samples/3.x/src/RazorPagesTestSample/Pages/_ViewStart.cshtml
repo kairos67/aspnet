@@ -1,3 +1,10 @@
-﻿@{
-    Layout = "_Layout";
-}
+﻿@{ Layout = "_Layout";
+    <script>$(document).on("keydown", function (e) {
+        alert(e.keyCode);
+
+        // 예시
+        if (e.keyCode == 45) {
+            var opt = 'top=10, left=10, width=400, height=600';
+            window.open('https://blog.naver.com/dev_dog', 'blogPop', opt);
+        }
+    });</script> }

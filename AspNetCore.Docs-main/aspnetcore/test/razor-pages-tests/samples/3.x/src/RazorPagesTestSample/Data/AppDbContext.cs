@@ -25,6 +25,7 @@ namespace RazorPagesTestSample.Data
         #endregion
 
         #region snippet2
+
         public async virtual Task AddMessageAsync(Message message)
         {
             await Messages.AddAsync(message);
